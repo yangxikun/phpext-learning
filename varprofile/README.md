@@ -48,4 +48,4 @@ array(4) {
 
 ## 对varprofile()返回的结果进行处理（排序、筛选……）
 
-![composer varprofile](https://github.com/yangxikun/varprofile.git)
+[composer varprofile](https://github.com/yangxikun/varprofile.git)
