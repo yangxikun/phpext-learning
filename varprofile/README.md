@@ -8,7 +8,7 @@ array varprofile ()
 
 ## Parameters
 
-占无
+暂无
 
 ## Return Values
 
@@ -24,7 +24,7 @@ array(4) {
         }
         ……
     },
-    'active' =>                 //当前作用于变量
+    'active' =>                 //当前作用域变量
     array(*) {
         ……
     },
@@ -46,6 +46,6 @@ array(4) {
 * DOUBLE算sizeof(double)个字节；
 * STRING算字符串占用的字节数；
 
-## varprofile()返回的结果进行处理（排序、筛选……）
+## 对varprofile()返回的结果进行处理（排序、筛选……）
 
-![]()
+![composer varprofile](https://github.com/yangxikun/varprofile.git)

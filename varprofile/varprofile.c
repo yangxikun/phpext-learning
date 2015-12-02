@@ -232,7 +232,7 @@ PHP_FUNCTION(varprofile)
 		}
 		zend_hash_move_forward_ex(EG(function_table), &pos);
 	}
-	add_assoc_zval(return_value, "function.static", parentarray);
+	add_assoc_zval(return_value, "functionStatic", parentarray);
 
 	/* profile class static variables */
 	MAKE_STD_ZVAL(parentarray);
@@ -306,7 +306,7 @@ PHP_FUNCTION(varprofile)
 		}
 		zend_hash_move_forward_ex(EG(class_table), &pos);
 	}
-	add_assoc_zval(return_value, "class.static", parentarray);
+	add_assoc_zval(return_value, "classStatic", parentarray);
 	if (!should_new_subarray) {
 		FREE_HASHTABLE(Z_ARRVAL_P(subarray));
 		FREE_ZVAL(subarray);
