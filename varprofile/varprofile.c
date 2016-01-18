@@ -100,6 +100,7 @@ static zval* class_memory_use_profile(HashTable *hashtable, ref_zval_list *rzl)
 			switch (Z_TYPE_PP(entry)) {
 				case IS_LONG:
 				case IS_BOOL:                    
+				case IS_RESOURCE:
                     tmp_key == NULL ? add_assoc_long(subarray, prop_name, sizeof(long))
                         : add_assoc_long(subarray, tmp_key, sizeof(long));
 					break;
@@ -161,6 +162,7 @@ static zval* array_memory_use_profile(HashTable *hashtable, ref_zval_list *rzl)
 		switch (Z_TYPE_PP(entry)) {
 			case IS_LONG:
 			case IS_BOOL:
+			case IS_RESOURCE:
 				Z_TYPE(key) == IS_STRING ? add_assoc_long(subarray, Z_STRVAL(key), sizeof(long))
 					: add_index_long(subarray, Z_LVAL(key), sizeof(long));//add_assoc_long底层会对key进行处理
 				break;
